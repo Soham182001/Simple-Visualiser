@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualiser</title>
+        <h1 style="text-align: center;">This is a visualiser</h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="background-color: #d6e0f0;">
+        <style>
+            .grid-containm{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+                background-color: #eff48e;
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .containerc{
+              display: grid;
+              grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+              background-color: #2196F3;
+            }
+            .cell{
+              background-color: #ffffff;
+              padding: 5px;
+              font-size: 30px;
+              text-align: center;
+            }
+            .container1{
+              padding: 10px;
+            }
+            .but{
+              background-color: #fca652;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+            .butt{
+              text-align: center;
+              background-color: transparent;
+            }
+            .buttt{
+              background-color: #726a95;
+              border: transparent;
+              border-radius: 5px;
+              color: #f4ebc1;
+              padding: 15px;
+            }
+            .buttt:hover{
+              background-color: #f4ebc1;
+              color: #726a95;
+            }
+        </style>
+        <div class="grid-containm">
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+        </div>
+        <div style="padding: 10px;" class="but"><div class="butt"><button class="buttt" onclick="myFunction()">Visualise</button></div></div>        
+          <script>
+          var d=0;
+          function myFunction() {
+            if(d==0){  
+              var x = document.getElementsByClassName("cell");
+              d=1;
+              var i=100,j=0,k=500;
+              while(k>0){
+                while (i >= 0) { 
+                  task(i); 
+                  i--;
+                  j++ 
+                } 
+                i=100;
+                while(i>=0){
+                  task1(i);
+                  i--;
+                  j++;
+                }
+                i=100;
+                k--;
+              }
+              function task(i) {
+                setTimeout(function() { 
+                  x[i].style.backgroundColor = "#1d2d50";
+                }, 75*j);  
+                setTimeout(function() { 
+                  x[i].style.backgroundColor = "#de4463";
+                }, 75*(j+1)); 
+              }
+              function task1(i) {
+                setTimeout(function() { 
+                  x[i].style.backgroundColor = "#1d2d50";
+                }, 75*j); 
+                setTimeout(function() { 
+                  x[i].style.backgroundColor = "#ffffff";
+                }, 75*(j+1)); 
+              }
+            }
+          } 
+          </script>
+    </body>
+</html>
