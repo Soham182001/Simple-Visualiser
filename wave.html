@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualiser</title>
+        <h1 style="text-align: center;">WAVE visualiser</h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="background-color: #d6e0f0;">
+        <style>
+            .grid-containm{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+                background-color: #2d4059;
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .containerc{
+              display: grid;
+              grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+              background-color: #2196F3;
+            }
+            .cell{
+              background-color: #ffffff;
+              padding: 5px;
+              font-size: 30px;
+              text-align: center;
+            }
+            .container1{
+              padding: 10px;
+            }
+            .but{
+              background-color: #decdc3;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+            .butt{
+              text-align: center;
+              background-color: transparent;
+            }
+            .buttt{
+              background-color: #726a95;
+              border: transparent;
+              border-radius: 5px;
+              color: #f4ebc1;
+              padding: 15px;
+            }
+            .buttt:hover{
+              background-color: #f4ebc1;
+              color: #726a95;
+            }
+            .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 25px;
+            background: #625261;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+            .slider:hover {
+            opacity: 1;
+            }
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+            }
+            .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+            }
+            .text{
+              display: grid;
+              grid-template-columns: auto auto auto;
+            }
+            .left{
+              text-align: left;
+            }
+            .right{
+              text-align: right;
+            }
+            .middle{
+              text-align: center;
+            }
+        </style>
+        <div class="grid-containm">
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                  <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                  <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+            <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                  <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="containerc">
+                  <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+        </div>
+        <div style="background-color: #ea5455; padding: 10px;">Speed = <span id="demo"></span> (Slide green button to change)<input type="range" min="1" max="100" id="speed" class="slider"><div class="text"><div class="left">1</div><div class="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</div><div class="right">100</div></div></div>
+        <div style="padding: 10px;" class="but"><div class="butt"><button class="buttt" onclick="myFunction()">Visualise</button><span>&nbsp;&nbsp;</span><button class="buttt" onclick="myFunctionstop()">Stop</button></div></div>    
+        <h5 style="padding: 10px; margin-top: 0px;">Press Stop to reset</h5>
+          <script>
+          var d=0;
+          var arr = [1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1];
+          var arc = [1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1];
+          var t=100000,j=0,m=0,x;
+          var slider = document.getElementById("speed");
+          var output = document.getElementById("demo");
+          output.innerHTML = slider.value;
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+          function myFunctionstop(){
+              location.reload();
+          }
+          function myFunction() {
+            x=document.getElementById("speed");
+            var currentVal = x.value;
+            if(d==0){  
+                var x = document.getElementsByClassName("cell");
+                d=1;
+                while(t>=0){
+                    task(j);
+                    j++;
+                    t--;
+                }
+                function task(j) { 
+                setTimeout(function() { 
+                    var k=0;
+                    for(var i=0;i<=40;i++){  
+                        if(arc[i]==1){
+                            for(var l=k;l<k+10-arr[i]-1;l++){
+                                x[k+l].style.backgroundColor = "#ffffff";          
+                            }
+                            for(var l=k+10-arr[i];l<k+10;l++){
+                                x[k+l].style.backgroundColor = "#1d2d50";            
+                            }
+                            arr[i]++;
+                            if(arr[i]==5){
+                              arc[i]=0;
+                            }
+                        }else{
+                            for(var l=k;l<k+10-arr[i]+1;l++){
+                                x[k+l].style.backgroundColor = "#ffffff";          
+                            }
+                            for(var l=k+10-arr[i]+1;l<k+10;l++){
+                                x[k+l].style.backgroundColor = "#1d2d50";            
+                            }
+                            arr[i]--;
+                            if(arr[i]==1){
+                                arc[i]=1;
+                            }
+                        }
+                        k=k+10;
+                    }
+                }, (200-currentVal*2)*(j+1)); 
+              }
+            }
+          } 
+          </script>
+    </body>
+</html>
+
