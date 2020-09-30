@@ -12,7 +12,7 @@ ___
 height = 400px
 weight = 600px
 alt = "screenshot 1">
-
+___
 <img src = "screenshots/pic2.png"
 height = 400px
 weight = 600px
