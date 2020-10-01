@@ -8,6 +8,7 @@ Just open the above [visualise.html](visualise.html) in any browser
 2. Second one wave.html is representation of a wave where a speed can be reset and can see wave at different speeds.
 ___
 ## ScreenShots
+![](screenshots/visualise.gif)
 <img src = "screenshots/pic1.png"
 height = 400px
 weight = 600px
